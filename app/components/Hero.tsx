@@ -70,7 +70,7 @@ export default function Hero() {
                    2xl:scale-100 2xl:right-[17%] 2xl:bottom-[-5%] 
                    4xl:scale-[3.0] 4xl:right-[19%] 4xl:bottom-[-10%]
                    origin-bottom-right rotate-[5.03deg] z-0"
-        src="/ringlight.png"
+        src="/ringlight card.png"
         alt="Ring light on red background"
         width={222}
         height={212}
