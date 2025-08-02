@@ -1,0 +1,102 @@
+/* app/globals.css */
+
+/* Remove any @import url(...) for fonts here. Use next/font in layout.tsx */
+@import "tailwindcss"; /* Keep this, or replace with @tailwind directives if necessary */
+
+/* Add your custom theme definitions */
+@theme inline {
+  /* Existing Geist font variables */
+  --font-geist-sans: var(--font-geist-sans);
+  --font-geist-mono: var(--font-geist-mono);
+
+  /* New font variables from next/font */
+  --font-plus-jakarta-sans: var(--font-plus-jakarta-sans);
+  --font-inter: var(--font-inter);
+
+  /* Define your primary font utilities based on the new variables */
+  --font-sans-default: var(--font-inter); /* Example: Inter as default sans-serif */
+  --font-heading: var(--font-plus-jakarta-sans); /* Plus Jakarta Sans for headings */
+
+  /* Define colors based on your Figma design / plugin output */
+  --color-neutral-800: #262626; /* Adjust exact hex code from Figma */
+  --color-neutral-500: #737373; /* Adjust exact hex code from Figma */
+  --color-rose-500: #F43F5E; /* Adjust exact hex code from Figma */
+  --color-rose-600: #E11D48; /* For hover states or darker accents */
+  --color-zinc-600: #525252; /* Adjust exact hex code from Figma */
+  --color-zinc-900: #18181B; /* Adjust exact hex code from Figma */
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-red-600: #DC2626; /* If this is used for the logo and distinct from rose */
+  --color-yellow-200: #FDE047; /* For the hero section element */
+  --color-green-400: #4ade80; /* For the hero section element */
+
+
+  /* Define custom font sizes if your design deviates from Tailwind defaults significantly */
+  /* Example:
+  --font-size-3xl: 32px; // for text-3xl
+  --font-size-base: 16px; // for text-base
+  --font-size-5xl: 48px; // for text-5xl (Why Shop title)
+  --font-size-8xl: 96px; // for text-8xl (Powering Up title)
+  */
+
+  /* Define custom spacing if your design deviates from Tailwind defaults */
+  /* Example:
+  --spacing-1: 4px; // for p-1, m-1
+  --spacing-2: 8px; // for p-2, m-2
+  --spacing-3: 12px; // for p-3, m-3
+  --spacing-4: 16px; // for p-4, m-4
+  --spacing-6: 24px; // for p-6, m-6
+  --spacing-8: 32px; // for p-8, m-8
+  --spacing-12: 48px; // for p-12, m-12
+  --spacing-28: 112px; // for px-28 (from Header) -> convert to proper Tailwind scale if possible
+  */
+}
+
+/* Add custom utilities if you want to use simpler class names for your theme variables */
+@layer utilities {
+  /* Font utilities */
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  /* Color utilities (if you don't want to use directly like text-[var(--color-neutral-800)]) */
+  .text-neutral-800 { color: var(--color-neutral-800); }
+  .text-neutral-500 { color: var(--color-neutral-500); }
+  .bg-rose-500 { background-color: var(--color-rose-500); }
+  .bg-rose-600 { background-color: var(--color-rose-600); }
+  .text-white { color: var(--color-white); }
+  .bg-white { background-color: var(--color-white); }
+  .bg-red-600 { background-color: var(--color-red-600); } /* If you need this specific red */
+  .bg-yellow-200 { background-color: var(--color-yellow-200); }
+  .bg-green-400 { background-color: var(--color-green-400); }
+  /* Define custom font sizes using vars if you didn't define them in @theme and want custom utilities */
+  .text-h1 { font-size: var(--font-size-h1); } /* If you defined --font-size-h1 in @theme */
+}
+
+
+/* Existing :root variables (from your original code) */
+:root {
+  --background: #ffffff;
+  --foreground: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  /* Use your defined font variable for the body */
+  font-family: var(--font-body), sans-serif; /* Fallback to generic sans-serif */
+}
+
+html {
+  scroll-behavior: smooth;
+}
