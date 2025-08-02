@@ -58,7 +58,7 @@ export default function Contact() {
   return (
     // Main container for the Contact section
     // Responsive padding and spacing
-    <section id="contact-us" className="mx-auto max-w-[1200px] px-4 py-12 sm:py-14 md:py-16"> {/* Responsive vertical padding */}
+    <section id="contact-us" className="mx-auto max-w-[1200px] px-4 pt-4 pb-12 sm:pt-6 sm:pb-14 md:pt-8 md:pb-16"> {/* Reduced top padding */}
       {/* Grid for "Visit Our Store" and "Get in Touch" columns */}
       {/* Responsive grid gaps */}
       <div className="grid grid-cols-1 gap-12 sm:gap-14 md:gap-16 lg:grid-cols-2 lg:gap-[65px]">
