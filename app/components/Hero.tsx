@@ -7,7 +7,7 @@ import React from 'react';
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-[80vh] sm:min-h-[calc(100vh-68px)] w-full flex-col items-center justify-start pt-8 sm:justify-center px-4 py-4 text-center sm:py-12 md:py-16 lg:py-28 xl:py-32 2xl:py-40 4xl:py-64 mb-8 sm:mb-20 md:mb-28">
+    <section className="relative flex min-h-[70vh] sm:min-h-[calc(100vh-68px)] w-full flex-col items-center justify-start pt-8 sm:justify-center px-4 py-4 text-center sm:py-12 md:py-16 lg:py-28 xl:py-32 2xl:py-40 4xl:py-64 mb-4 sm:mb-20 md:mb-28">
 
       {/* Item 1: Top-Left (Headphones) - Hidden on mobile */}
       <Image
@@ -136,7 +136,7 @@ export default function Hero() {
       </div>
 
       {/* Social Media Icons */}
-      <div className="absolute bottom-[8%] sm:bottom-10 md:bottom-12 2xl:bottom-24 left-1/2 -translate-x-1/2 transform inline-flex items-center justify-center gap-2 sm:gap-3 md:gap-4 2xl:gap-8 z-20">
+      <div className="absolute bottom-[5%] sm:bottom-10 md:bottom-12 2xl:bottom-24 left-1/2 -translate-x-1/2 transform inline-flex items-center justify-center gap-2 sm:gap-3 md:gap-4 2xl:gap-8 z-20">
         <Link href="https://facebook.com" className="flex h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 2xl:h-16 2xl:w-16 4xl:h-20 4xl:w-20 items-center justify-center rounded-[14px] sm:rounded-[24px] md:rounded-[30px] 2xl:rounded-[40px] 4xl:rounded-[40px] bg-[var(--color-neutral-800)] p-1 sm:p-1.5 md:p-2 2xl:p-4 transition-all duration-200 hover:scale-110 focus:outline-none">
           <Image src="/fb hero.png" alt="Facebook" width={16} height={16} className="sm:w-5 sm:h-5 md:w-6 md:h-6 xl:w-7 xl:h-7 2xl:w-9 2xl:h-9 4xl:w-12 4xl:h-12" />
         </Link>
