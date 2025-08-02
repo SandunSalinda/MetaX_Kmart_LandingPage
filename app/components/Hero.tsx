@@ -45,7 +45,7 @@ export default function Hero() {
 
       {/* Item 3: Bottom-Left (Speaker) */}
       <Image
-        className="absolute left-[5%] bottom-[23%] scale-[0.31] 
+        className="absolute left-[5%] bottom-[23%] scale-[0.35] 
                    sm:scale-[0.4] sm:left-[10%] sm:bottom-[8%] 
                    md:scale-[0.5] md:left-[10%] md:bottom-[-5%] 
                    lg:scale-75 lg:left-[15%] lg:bottom-[-5%] 
@@ -62,7 +62,7 @@ export default function Hero() {
 
       {/* Item 4: Bottom-Right (Ring Light) */}
       <Image
-        className="absolute right-[8%] bottom-[25%] scale-[0.32] 
+        className="absolute right-[8%] bottom-[25%] scale-[0.35] 
                    sm:scale-[0.4] sm:right-[8%] sm:bottom-[15%] 
                    md:scale-[0.5] md:right-[10%] md:bottom-[-5%] 
                    lg:scale-75 lg:right-[15%] lg:bottom-[-5%] 
