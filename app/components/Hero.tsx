@@ -140,13 +140,13 @@ export default function Hero() {
       {/* Social Media Icons */}
       <div className="absolute bottom-[5%] sm:bottom-10 md:bottom-12 2xl:bottom-24 left-1/2 -translate-x-1/2 transform inline-flex items-center justify-center gap-2 sm:gap-3 md:gap-4 2xl:gap-8 z-20">
         <Link href="https://facebook.com" className="flex h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 2xl:h-16 2xl:w-16 4xl:h-20 4xl:w-20 items-center justify-center rounded-[14px] sm:rounded-[16px] md:rounded-[20px] 2xl:rounded-[32px] 4xl:rounded-[40px] bg-[var(--color-neutral-800)] p-1 sm:p-1.5 md:p-2 2xl:p-4 transition-all duration-200 hover:scale-110 focus:outline-none">
-          <Facebook01Icon size={24} color="#ffffffff" />
+          <Facebook01Icon size={16} className="sm:w-6 sm:h-6 md:w-6 md:h-6" color="#ffffffff" />
         </Link>
         <Link href="https://instagram.com" className="flex h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 2xl:h-16 2xl:w-16 4xl:h-20 4xl:w-20 items-center justify-center rounded-[14px] sm:rounded-[24px] md:rounded-[30px] 2xl:rounded-[40px] 4xl:rounded-[40px] bg-[var(--color-neutral-800)] p-1 sm:p-1.5 md:p-2 2xl:p-4 transition-all duration-200 hover:scale-110 focus:outline-none">
-          <InstagramIcon size={24} color="#ffffffff" />
+          <InstagramIcon size={16} className="sm:w-6 sm:h-6 md:w-6 md:h-6" color="#ffffffff" />
         </Link>
         <Link href="mailto:info@example.com" className="flex h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 2xl:h-16 2xl:w-16 4xl:h-20 4xl:w-20 items-center justify-center rounded-[14px] sm:rounded-[24px] md:rounded-[30px] 2xl:rounded-[40px] 4xl:rounded-[40px] bg-[var(--color-neutral-800)] p-1 sm:p-1.5 md:p-2 2xl:p-4 transition-all duration-200 hover:scale-110 focus:outline-none">
-          <Mail02Icon size={24} color="#ffffffff" />
+          <Mail02Icon size={16} className="sm:w-6 sm:h-6 md:w-6 md:h-6" color="#ffffffff" />
         </Link>
       </div>
     </section>
