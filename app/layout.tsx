@@ -35,8 +35,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "K Mart Landing Page", // Updated title
-  description: "Your ultimate shopping destination in Sri Lanka.", // More specific description
+  title: "K Mart - Your Ultimate Shopping Destination in Sri Lanka",
+  description: "Discover the best electronics, gadgets, and accessories at K Mart. Located in Kebithigollewa, Sri Lanka. Quality products, great prices, and excellent service.",
+  icons: {
+    icon: '/favicon-kmart.png',
+    shortcut: '/favicon-kmart.png',
+    apple: '/favicon-kmart.png',
+  },
 };
 
 export default function RootLayout({
