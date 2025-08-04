@@ -4,7 +4,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { Facebook01Icon, InstagramIcon, Mail02Icon } from 'hugeicons-react';
+import { Facebook01Icon, WhatsappIcon, Mail02Icon,  } from 'hugeicons-react';
 
 
 export default function Hero() {
@@ -52,8 +52,8 @@ export default function Hero() {
                    md:scale-[0.5] md:left-[10%] md:bottom-[-5%] 
                    lg:scale-75 lg:left-[15%] lg:bottom-[-5%] 
                    xl:scale-90 xl:left-[16%] xl:bottom-[-15%] 
-                   2xl:scale-[1.3] 2xl:left-[20%] 2xl:bottom-[5%] 
-                   4xl:scale-[4.0] 4xl:left-[20%] 4xl:bottom-[5%]
+                   2xl:scale-[1.3] 2xl:left-[20%] 2xl:bottom-[8%] 
+                   4xl:scale-[4.0] 4xl:left-[20%] 4xl:bottom-[8%]
                    origin-bottom-left rotate-[-5.91deg] z-0"
         src="/jbl card.png"
         alt="Speaker on yellow background"
@@ -139,11 +139,11 @@ export default function Hero() {
 
       {/* Social Media Icons */}
       <div className="absolute bottom-[5%] sm:bottom-10 md:bottom-12 2xl:bottom-24 left-1/2 -translate-x-1/2 transform inline-flex items-center justify-center gap-2 sm:gap-3 md:gap-4 2xl:gap-8 z-20">
-        <Link href="https://facebook.com" className="flex h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 2xl:h-16 2xl:w-16 4xl:h-20 4xl:w-20 items-center justify-center rounded-[14px] sm:rounded-[16px] md:rounded-[20px] 2xl:rounded-[32px] 4xl:rounded-[40px] bg-[var(--color-neutral-800)] p-1 sm:p-1.5 md:p-2 2xl:p-4 transition-all duration-200 hover:scale-110 focus:outline-none">
+        <Link href="https://www.facebook.com/share/12L2oSJptNF/" target="_blank" className="flex h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 2xl:h-16 2xl:w-16 4xl:h-20 4xl:w-20 items-center justify-center rounded-[14px] sm:rounded-[16px] md:rounded-[20px] 2xl:rounded-[32px] 4xl:rounded-[40px] bg-[var(--color-neutral-800)] p-1 sm:p-1.5 md:p-2 2xl:p-4 transition-all duration-200 hover:scale-110 focus:outline-none">
           <Facebook01Icon size={16} className="sm:w-6 sm:h-6 md:w-6 md:h-6" color="#ffffffff" />
         </Link>
-        <Link href="https://instagram.com" className="flex h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 2xl:h-16 2xl:w-16 4xl:h-20 4xl:w-20 items-center justify-center rounded-[14px] sm:rounded-[24px] md:rounded-[30px] 2xl:rounded-[40px] 4xl:rounded-[40px] bg-[var(--color-neutral-800)] p-1 sm:p-1.5 md:p-2 2xl:p-4 transition-all duration-200 hover:scale-110 focus:outline-none">
-          <InstagramIcon size={16} className="sm:w-6 sm:h-6 md:w-6 md:h-6" color="#ffffffff" />
+        <Link href="https://whatsapp.com" target="_blank" className="flex h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 2xl:h-16 2xl:w-16 4xl:h-20 4xl:w-20 items-center justify-center rounded-[14px] sm:rounded-[24px] md:rounded-[30px] 2xl:rounded-[40px] 4xl:rounded-[40px] bg-[var(--color-neutral-800)] p-1 sm:p-1.5 md:p-2 2xl:p-4 transition-all duration-200 hover:scale-110 focus:outline-none">
+          <WhatsappIcon size={16} className="sm:w-6 sm:h-6 md:w-6 md:h-6" color="#ffffffff" />
         </Link>
         <Link href="mailto:info@example.com" className="flex h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 2xl:h-16 2xl:w-16 4xl:h-20 4xl:w-20 items-center justify-center rounded-[14px] sm:rounded-[24px] md:rounded-[30px] 2xl:rounded-[40px] 4xl:rounded-[40px] bg-[var(--color-neutral-800)] p-1 sm:p-1.5 md:p-2 2xl:p-4 transition-all duration-200 hover:scale-110 focus:outline-none">
           <Mail02Icon size={16} className="sm:w-6 sm:h-6 md:w-6 md:h-6" color="#ffffffff" />

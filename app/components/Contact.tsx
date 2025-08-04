@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { Facebook01Icon, InstagramIcon, Mail02Icon } from 'hugeicons-react';
+import { Facebook01Icon, WhatsappIcon, Mail02Icon } from 'hugeicons-react';
 
 // Reusable component for contact details (Hotline, Email)
 interface ContactDetailProps {
@@ -88,7 +88,7 @@ export default function Contact() {
                   K Mart
                 </div>
                 <div className="text-black text-base sm:text-lg font-normal font-['Plus_Jakarta_Sans'] capitalize">
-                  Kebithigollewa, Sri Lanka
+                  Padaviya Road, Kebithigollewa, Sri Lanka
                 </div>
               </div>
             </div>
@@ -124,7 +124,7 @@ export default function Contact() {
             <ContactDetail
               iconSrc="/phone.png"
               label="Hotline"
-              value="077-XXXXXXX"
+              value="077 738 9872"
             />
           </div>
           
@@ -145,22 +145,25 @@ export default function Contact() {
             </div>
             <div className="inline-flex items-center justify-start gap-2 sm:gap-3"> {/* Responsive gaps */}
               <Link 
-                href="https://facebook.com/kmart"
+                href="https://www.facebook.com/share/12L2oSJptNF/"
                 aria-label="Facebook"
+                target="_blank"
                 className="flex h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 items-center justify-center rounded-lg bg-[#FC5154] p-1 transition-all duration-200 hover:scale-110 focus:outline-none"
               >
                 <Facebook01Icon size={24} color="#ffffffff" />
               </Link>
               <Link 
-                href="https://instagram.com/kmart"
-                aria-label="Instagram"
+                href="https://whatsapp.com"
+                aria-label="WhatsApp"
+                target="_blank"
                 className="flex h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 items-center justify-center rounded-lg bg-[#FC5154] p-1 transition-all duration-200 hover:scale-110 focus:outline-none"
               >
-                <InstagramIcon size={24} color="#ffffffff" />
+                <WhatsappIcon size={24} color="#ffffffff" />
               </Link>
               <Link 
                 href="mailto:info@kmartlk.com"
                 aria-label="Email"
+                target="_blank"
                 className="flex h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 items-center justify-center rounded-lg bg-[#FC5154] p-1 transition-all duration-200 hover:scale-110 focus:outline-none"
               >
                 <Mail02Icon size={24} color="#ffffffff" />
