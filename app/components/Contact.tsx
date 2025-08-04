@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { Facebook01Icon, InstagramIcon, Mail02Icon } from 'hugeicons-react';
 
 // Reusable component for contact details (Hotline, Email)
 interface ContactDetailProps {
@@ -143,21 +144,27 @@ export default function Contact() {
               Follow us on social media
             </div>
             <div className="inline-flex items-center justify-start gap-2 sm:gap-3"> {/* Responsive gaps */}
-              <SocialMediaIcon
-                iconSrc="/fb.svg" // Confirm this path
+              <Link 
                 href="https://facebook.com/kmart"
-                alt="Facebook icon"
-              />
-              <SocialMediaIcon
-                iconSrc="/insta.svg" // Confirm this path
+                aria-label="Facebook"
+                className="flex h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 items-center justify-center rounded-lg bg-[#FC5154] p-1 transition-all duration-200 hover:scale-110 focus:outline-none"
+              >
+                <Facebook01Icon size={24} color="#ffffffff" />
+              </Link>
+              <Link 
                 href="https://instagram.com/kmart"
-                alt="Instagram icon"
-              />
-              <SocialMediaIcon
-                iconSrc="/mail.svg" // Confirm this path
-                href="https://twitter.com/kmart"
-                alt="Mail icon"
-              />
+                aria-label="Instagram"
+                className="flex h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 items-center justify-center rounded-lg bg-[#FC5154] p-1 transition-all duration-200 hover:scale-110 focus:outline-none"
+              >
+                <InstagramIcon size={24} color="#ffffffff" />
+              </Link>
+              <Link 
+                href="mailto:info@kmartlk.com"
+                aria-label="Email"
+                className="flex h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 items-center justify-center rounded-lg bg-[#FC5154] p-1 transition-all duration-200 hover:scale-110 focus:outline-none"
+              >
+                <Mail02Icon size={24} color="#ffffffff" />
+              </Link>
             </div>
           </div>
         </div>

@@ -65,8 +65,8 @@ export default function Header() {
           />
         </Link>
 
-        {/* Desktop Navigation - Hidden on mobile and tablet */}
-        <nav className="hidden lg:flex items-center gap-6">
+        {/* Desktop Navigation - Hidden on mobile, visible on tablet and up */}
+        <nav className="hidden md:flex items-center gap-6">
           {/* About Link */}
           <Link
             href="#about-us"
@@ -87,10 +87,10 @@ export default function Header() {
           </button>
         </nav>
 
-        {/* Mobile & Tablet Hamburger Menu Button - Visible on mobile and tablet */}
+        {/* Mobile Hamburger Menu Button - Visible only on mobile */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="lg:hidden flex flex-col items-center justify-center w-8 h-8 space-y-1.5"
+          className="md:hidden flex flex-col items-center justify-center w-8 h-8 space-y-1.5"
           aria-label="Toggle mobile menu"
         >
           <span className={`w-6 h-0.5 bg-[var(--color-neutral-800)] transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
@@ -99,8 +99,8 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Simple Mobile & Tablet Menu Dropdown */}
-      <div className={`lg:hidden absolute top-full right-0 w-48 bg-white rounded-lg shadow-lg transition-all duration-200 ease-out ${isMobileMenuOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 -translate-y-2 invisible'}`}>
+      {/* Mobile Menu Dropdown */}
+      <div className={`md:hidden absolute top-full right-0 w-48 bg-white rounded-lg shadow-lg transition-all duration-200 ease-out ${isMobileMenuOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 -translate-y-2 invisible'}`}>
         <nav className="py-2">
           {/* About Link */}
           <Link

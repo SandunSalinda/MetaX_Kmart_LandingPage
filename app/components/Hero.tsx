@@ -4,6 +4,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { Facebook01Icon, InstagramIcon, Mail02Icon } from 'hugeicons-react';
+
 
 export default function Hero() {
   return (
@@ -102,7 +104,7 @@ export default function Hero() {
         {/* Content spacing */}
         <div className="mt-2 sm:mt-4 md:mt-4 lg:mt-4 2xl:mt-8 flex flex-col items-center justify-center gap-2 sm:gap-5 md:gap-6 2xl:gap-12">
           {/* Main Heading - UPDATED 4xl font size */}
-          <h1 className="font-heading text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl 4xl:text-[120px] font-semibold text-[var(--color-neutral-800)] leading-tight text-center">
+          <h1 className="font-heading text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl 4xl:text-[120px] font-semibold text-[var(--color-neutral-800)] leading-tight text-center">
             Powering Up<br />Something Exciting
           </h1>
 
@@ -137,14 +139,14 @@ export default function Hero() {
 
       {/* Social Media Icons */}
       <div className="absolute bottom-[5%] sm:bottom-10 md:bottom-12 2xl:bottom-24 left-1/2 -translate-x-1/2 transform inline-flex items-center justify-center gap-2 sm:gap-3 md:gap-4 2xl:gap-8 z-20">
-        <Link href="https://facebook.com" className="flex h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 2xl:h-16 2xl:w-16 4xl:h-20 4xl:w-20 items-center justify-center rounded-[14px] sm:rounded-[24px] md:rounded-[30px] 2xl:rounded-[40px] 4xl:rounded-[40px] bg-[var(--color-neutral-800)] p-1 sm:p-1.5 md:p-2 2xl:p-4 transition-all duration-200 hover:scale-110 focus:outline-none">
-          <Image src="/fb hero.png" alt="Facebook" width={16} height={16} className="sm:w-5 sm:h-5 md:w-6 md:h-6 xl:w-7 xl:h-7 2xl:w-9 2xl:h-9 4xl:w-12 4xl:h-12" />
+        <Link href="https://facebook.com" className="flex h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 2xl:h-16 2xl:w-16 4xl:h-20 4xl:w-20 items-center justify-center rounded-[14px] sm:rounded-[16px] md:rounded-[20px] 2xl:rounded-[32px] 4xl:rounded-[40px] bg-[var(--color-neutral-800)] p-1 sm:p-1.5 md:p-2 2xl:p-4 transition-all duration-200 hover:scale-110 focus:outline-none">
+          <Facebook01Icon size={24} color="#ffffffff" />
         </Link>
         <Link href="https://instagram.com" className="flex h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 2xl:h-16 2xl:w-16 4xl:h-20 4xl:w-20 items-center justify-center rounded-[14px] sm:rounded-[24px] md:rounded-[30px] 2xl:rounded-[40px] 4xl:rounded-[40px] bg-[var(--color-neutral-800)] p-1 sm:p-1.5 md:p-2 2xl:p-4 transition-all duration-200 hover:scale-110 focus:outline-none">
-          <Image src="/insta hero.png" alt="Instagram" width={16} height={16} className="sm:w-5 sm:h-5 md:w-6 md:h-6 xl:w-7 xl:h-7 2xl:w-9 2xl:h-9 4xl:w-12 4xl:h-12" />
+          <InstagramIcon size={24} color="#ffffffff" />
         </Link>
         <Link href="mailto:info@example.com" className="flex h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 2xl:h-16 2xl:w-16 4xl:h-20 4xl:w-20 items-center justify-center rounded-[14px] sm:rounded-[24px] md:rounded-[30px] 2xl:rounded-[40px] 4xl:rounded-[40px] bg-[var(--color-neutral-800)] p-1 sm:p-1.5 md:p-2 2xl:p-4 transition-all duration-200 hover:scale-110 focus:outline-none">
-          <Image src="/mail hero.png" alt="Mail" width={16} height={16} className="sm:w-5 sm:h-5 md:w-6 md:h-6 xl:w-7 xl:h-7 2xl:w-9 2xl:h-9 4xl:w-12 4xl:h-12" />
+          <Mail02Icon size={24} color="#ffffffff" />
         </Link>
       </div>
     </section>
