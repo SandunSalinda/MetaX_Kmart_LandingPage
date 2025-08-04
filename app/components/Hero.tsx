@@ -52,7 +52,7 @@ export default function Hero() {
                    md:scale-[0.5] md:left-[10%] md:bottom-[-5%] 
                    lg:scale-75 lg:left-[15%] lg:bottom-[-5%] 
                    xl:scale-90 xl:left-[16%] xl:bottom-[-15%] 
-                   2xl:scale-[1.3] 2xl:left-[20%] 2xl:bottom-[8%] 
+                   2xl:scale-[1.3] 2xl:left-[20%] 2xl:bottom-[5%] 
                    4xl:scale-[4.0] 4xl:left-[20%] 4xl:bottom-[5%]
                    origin-bottom-left rotate-[-5.91deg] z-0"
         src="/jbl card.png"
