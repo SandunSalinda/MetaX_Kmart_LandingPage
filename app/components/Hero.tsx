@@ -103,13 +103,13 @@ export default function Hero() {
 
         {/* Content spacing */}
         <div className="mt-2 sm:mt-4 md:mt-4 lg:mt-4 2xl:mt-8 flex flex-col items-center justify-center gap-2 sm:gap-5 md:gap-6 2xl:gap-12">
-          {/* Main Heading - UPDATED 4xl font size */}
-          <h1 className="font-heading text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl 4xl:text-[120px] font-semibold text-[var(--color-neutral-800)] leading-tight text-center">
+          {/* Main Heading - UPDATED mobile, 2K and 4K font sizes */}
+          <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-8xl 4xl:text-[140px] font-semibold text-[var(--color-neutral-800)] leading-tight text-center">
             Powering Up<br />Something Exciting
           </h1>
 
-          {/* Subheading - UPDATED 4xl font size and max-width */}
-          <p className="font-body text-[10px] sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl 4xl:text-[40px] font-normal text-[var(--color-neutral-500)] text-center max-w-xs sm:max-w-md md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl 4xl:max-w-[1200px] leading-relaxed">
+          {/* Subheading - UPDATED mobile, 2K and 4K font sizes */}
+          <p className="font-body text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-3xl 4xl:text-[48px] font-normal text-[var(--color-neutral-500)] text-center max-w-xs sm:max-w-md md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl 4xl:max-w-[1200px] leading-relaxed">
             We are going to launch our website very soon.<br />
             Stay tuned for an all-new online shopping experience
           </p>
