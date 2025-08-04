@@ -18,8 +18,8 @@ export default function Hero() {
                    md:scale-[0.6] md:left-[12%] md:top-[15%] 
                    lg:scale-75 lg:left-[15%] lg:top-[12%] 
                    xl:scale-90 xl:left-[16%] 
-                   2xl:scale-[1.3] 2xl:left-[12%] 2xl:top-[8%] 
-                   4xl:scale-[4.0] 4xl:left-[12%] 4xl:top-[6%]
+                   2xl:scale-[1.3] 2xl:left-[20%] 2xl:top-[8%] 
+                   4xl:scale-[4.0] 4xl:left-[20%] 4xl:top-[6%]
                    origin-top-left rotate-[-9.08deg] z-0 hidden sm:block"
         src="/headphone card.png"
         alt="Headphones on red background"
@@ -35,8 +35,8 @@ export default function Hero() {
                    md:scale-[0.6] md:right-[8%] md:top-[15%] 
                    lg:scale-75 lg:right-[15%] lg:top-[12%] 
                    xl:scale-90 xl:right-[16%] 
-                   2xl:scale-[1.3] 2xl:right-[12%] 2xl:top-[8%] 
-                   4xl:scale-[4.0] 4xl:right-[12%] 4xl:top-[6%]
+                   2xl:scale-[1.3] 2xl:right-[20%] 2xl:top-[8%] 
+                   4xl:scale-[4.0] 4xl:right-[20%] 4xl:top-[6%]
                    origin-top-right rotate-[0deg] z-0 hidden sm:block"
         src="/gimble card.png"
         alt="Gimbal on green background"
@@ -52,8 +52,8 @@ export default function Hero() {
                    md:scale-[0.5] md:left-[10%] md:bottom-[-5%] 
                    lg:scale-75 lg:left-[15%] lg:bottom-[-5%] 
                    xl:scale-90 xl:left-[16%] xl:bottom-[-15%] 
-                   2xl:scale-[1.3] 2xl:left-[12%] 2xl:bottom-[8%] 
-                   4xl:scale-[4.0] 4xl:left-[12%] 4xl:bottom-[5%]
+                   2xl:scale-[1.3] 2xl:left-[20%] 2xl:bottom-[8%] 
+                   4xl:scale-[4.0] 4xl:left-[20%] 4xl:bottom-[5%]
                    origin-bottom-left rotate-[-5.91deg] z-0"
         src="/jbl card.png"
         alt="Speaker on yellow background"
@@ -69,8 +69,8 @@ export default function Hero() {
                    md:scale-[0.5] md:right-[10%] md:bottom-[-5%] 
                    lg:scale-75 lg:right-[15%] lg:bottom-[-5%] 
                    xl:scale-90 xl:right-[15%] xl:bottom-[-5%] 
-                   2xl:scale-[1.3] 2xl:right-[12%] 2xl:bottom-[8%] 
-                   4xl:scale-[4.0] 4xl:right-[12%] 4xl:bottom-[5%]
+                   2xl:scale-[1.3] 2xl:right-[20%] 2xl:bottom-[8%] 
+                   4xl:scale-[4.0] 4xl:right-[20%] 4xl:bottom-[5%]
                    origin-bottom-right rotate-[5.03deg] z-0"
         src="/ringlight card.png"
         alt="Ring light on red background"
