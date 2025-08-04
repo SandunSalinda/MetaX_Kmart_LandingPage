@@ -10,14 +10,14 @@ export default function Hero() {
   const [showSuccess, setShowSuccess] = useState(false);
   const [showError, setShowError] = useState(false); // New state for error alert
   const [alertPosition, setAlertPosition] = useState('out');
-  const emailInputRef = useRef(null);
+  const emailInputRef = useRef<HTMLInputElement>(null);
 
   // A simple function to validate email format using a regex
-  const isValidEmail = (email) => {
-    // This is a basic regex; more complex ones exist for stricter validation
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-  };
+  const isValidEmail = (email: string) => {
+  // This is a basic regex; more complex ones exist for stricter validation
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
+};
 
   const handleNotifyMeClick = () => {
     const email = emailInputRef.current?.value;
@@ -40,7 +40,9 @@ export default function Hero() {
     setShowSuccess(true);
     
     // Clear the email input field
-    emailInputRef.current.value = '';
+    if (emailInputRef.current) {
+      emailInputRef.current.value = '';
+    }
 
     // Show the alert and trigger the slide-in animation
     setAlertPosition('in');
