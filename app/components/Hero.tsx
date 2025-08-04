@@ -109,7 +109,7 @@ export default function Hero() {
           </h1>
 
           {/* Subheading - UPDATED larger mobile text for better readability */}
-          <p className="font-body text-sm sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-3xl 4xl:text-[48px] font-normal text-[var(--color-neutral-500)] text-center max-w-xs sm:max-w-md md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl 4xl:max-w-[1200px] leading-relaxed">
+          <p className="font-body text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-3xl 4xl:text-[48px] font-normal text-[var(--color-neutral-500)] text-center max-w-xs sm:max-w-md md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl 4xl:max-w-[1200px] leading-relaxed">
             We are going to launch our website very soon.<br />
             Stay tuned for an all-new online shopping experience
           </p>
