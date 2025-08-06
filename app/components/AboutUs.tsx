@@ -60,7 +60,7 @@ export default function AboutUs() {
         <FeatureCard
           iconSrc="/building.png" // Confirm this path and file name
           title="Trending Products from Colombo"
-          description="Latest fashion and lifestyle products sourced directly from the capital"
+          description="Latest tech gadgets and trending products, all in one place."
         />
         <FeatureCard
           iconSrc="/prices.png" // Confirm this path and file name
