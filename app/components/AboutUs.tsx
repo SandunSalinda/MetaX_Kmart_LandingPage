@@ -75,7 +75,7 @@ export default function AboutUs() {
         <FeatureCard
           iconSrc="/store.png" // Confirm this path and file name
           title="Physical Store in Kebithigollewa"
-          description="Visit our brick-and-mortar store for hands-on shopping experience"
+          description="Visit our store for a hands-on experience with the latest tech gadgets and electronics."
         />
         <FeatureCard
           iconSrc="/quality.png" // Confirm this path and file name
