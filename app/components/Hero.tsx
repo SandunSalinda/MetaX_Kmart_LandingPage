@@ -5,59 +5,62 @@ import Link from 'next/link';
 import React, { useState, useRef } from 'react';
 import { Facebook01Icon, WhatsappIcon, Mail02Icon, } from 'hugeicons-react';
 
-
 export default function Hero() {
   const [showSuccess, setShowSuccess] = useState(false);
-  const [showError, setShowError] = useState(false); // New state for error alert
+  const [showError, setShowError] = useState(false);
   const [alertPosition, setAlertPosition] = useState('out');
   const emailInputRef = useRef<HTMLInputElement>(null);
 
-  // A simple function to validate email format using a regex
+  // Email validation function (same as before)
   const isValidEmail = (email: string) => {
-  // This is a basic regex; more complex ones exist for stricter validation
-  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return regex.test(email);
-};
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  };
 
+  // SPAM-SAFE FORM HANDLER - Visual feedback only
   const handleNotifyMeClick = () => {
     const email = emailInputRef.current?.value;
 
-    // First, check if the email is empty or invalid
+    // Same validation logic for user experience
     if (!email || !isValidEmail(email)) {
-      // Show the error alert instead of the success one
       setShowError(true);
       setShowSuccess(false);
-
       setAlertPosition('in');
       setTimeout(() => setAlertPosition('out'), 3000);
       setTimeout(() => setShowError(false), 3500);
-
-      return; // Exit the function to prevent the success flow
+      return;
     }
 
-    // If the email is valid, proceed with the success flow
-    setShowError(false); // Ensure the error alert is hidden
+    // Show success feedback (same as before)
+    setShowError(false);
     setShowSuccess(true);
     
-    // Clear the email input field
+    // Clear the email input field (visual feedback)
     if (emailInputRef.current) {
       emailInputRef.current.value = '';
     }
 
-    // Show the alert and trigger the slide-in animation
+    // Show success alert animation (same as before)
     setAlertPosition('in');
     setTimeout(() => {
       setAlertPosition('out');
     }, 3000);
 
-    // Completely remove the alert from the DOM after the slide-out animation is finished
     setTimeout(() => {
       setShowSuccess(false);
     }, 3500);
+
+    // ⚠️ SPAM PREVENTION: NO ACTUAL DATA COLLECTION
+    // - No network requests
+    // - No email storage
+    // - No external API calls
+    // - No console logs with user data
+    // This is purely visual feedback for UX
   };
 
   return (
     <section className="relative flex min-h-[70vh] sm:min-h-[calc(100vh-68px)] w-full flex-col items-center justify-start pt-8 sm:justify-center px-4 py-4 text-center sm:py-12 md:py-16 lg:py-28 xl:py-32 2xl:py-40 4xl:py-64 mb-4 sm:mb-20 md:mb-28">
+      {/* This form is frontend-only. No emails are collected or sent. Domain security measure. */}
 
       {/* Success alert message */}
       {showSuccess && (
@@ -177,10 +180,10 @@ export default function Hero() {
           </p>
         </div>
 
-        {/* Email Input and Notify Me Button - UPDATED 4xl max-width */}
+        {/* SPAM-SAFE Email Input and Notify Me Button */}
         <div className="mt-4 sm:mt-8 md:mt-10 lg:mt-12 2xl:mt-24 flex w-full max-w-[280px] sm:max-w-sm md:max-w-lg xl:max-w-xl 2xl:max-w-2xl 4xl:max-w-[1024px] items-center rounded-[60px] 2xl:rounded-[120px] bg-[var(--color-white)] p-1 sm:p-2 md:p-2.5 lg:p-3 2xl:p-4 4xl:p-6 shadow-[0_4px_18px_0_rgba(0,0,0,0.13)] 2xl:shadow-[0_8px_36px_0_rgba(0,0,0,0.13)]">
           <input
-            ref={emailInputRef} // Add the ref to the input
+            ref={emailInputRef}
             type="email"
             placeholder="Enter your email"
             className="flex-1 h-[28px] sm:h-[32px] md:h-[36px] lg:h-[40px] xl:h-[48px] 2xl:h-[60px] 4xl:h-[88px] rounded-[60px] 2xl:rounded-[120px] px-2 sm:px-3 md:px-4 2xl:px-8 text-[10px] sm:text-xs md:text-sm xl:text-base 2xl:text-xl 4xl:text-[28px] font-normal text-[var(--color-zinc-600)] outline-none bg-transparent mr-1 sm:mr-1.5 md:mr-2 2xl:mr-4"
