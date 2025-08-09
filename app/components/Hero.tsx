@@ -112,7 +112,7 @@ export default function Hero() {
 
       {/* Item 3: Bottom-Left (Speaker) */}
       <Image
-        className="absolute left-[5%] bottom-[15%] scale-[0.35] 
+        className="absolute left-[5%] bottom-[5%] scale-[0.35] 
                     sm:scale-[0.4] sm:left-[10%] sm:bottom-[8%] 
                     md:scale-[0.5] md:left-[10%] md:bottom-[-5%] 
                     lg:scale-75 lg:left-[15%] lg:bottom-[-5%] 
@@ -129,7 +129,7 @@ export default function Hero() {
 
       {/* Item 4: Bottom-Right (Ring Light) */}
       <Image
-        className="absolute right-[8%] bottom-[17%] scale-[0.35] 
+        className="absolute right-[8%] bottom-[7%] scale-[0.35] 
                     sm:scale-[0.4] sm:right-[8%] sm:bottom-[15%] 
                     md:scale-[0.5] md:right-[10%] md:bottom-[-5%] 
                     lg:scale-75 lg:right-[15%] lg:bottom-[-5%] 
@@ -146,7 +146,7 @@ export default function Hero() {
 
       {/* Item 5: Center Gimbal (Mobile Only) */}
       <Image
-        className="absolute left-[50%] -translate-x-1/2 bottom-[2%] scale-[0.4] rotate-[-12.03deg]
+        className="absolute left-[50%] -translate-x-1/2 bottom-[-8%] scale-[0.4] rotate-[-12.03deg]
                     sm:hidden z-0"
         src="/gimble card.png"
         alt="Gimbal on green background"
@@ -168,13 +168,13 @@ export default function Hero() {
 
         {/* Content spacing */}
         <div className="mt-2 sm:mt-4 md:mt-4 lg:mt-4 2xl:mt-8 flex flex-col items-center justify-center gap-3 sm:gap-5 md:gap-6 2xl:gap-12">
-          {/* Main Heading - UPDATED much larger mobile text with better spacing */}
-          <h1 className="font-heading text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl 4xl:text-[140px] font-semibold text-[var(--color-neutral-800)] leading-tight text-center px-2">
+          {/* Main Heading - UPDATED refined mobile text size */}
+          <h1 className="font-heading text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl 4xl:text-[140px] font-semibold text-[var(--color-neutral-800)] leading-tight text-center px-2">
             Powering Up<br />Something Exciting
           </h1>
 
-          {/* Subheading - UPDATED much larger mobile text with better spacing */}
-          <p className="font-body text-lg sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl 4xl:text-[48px] font-normal text-[var(--color-neutral-500)] text-center max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl 4xl:max-w-[1200px] leading-relaxed px-4">
+          {/* Subheading - UPDATED refined mobile text size */}
+          <p className="font-body text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl 4xl:text-[48px] font-normal text-[var(--color-neutral-500)] text-center max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl 4xl:max-w-[1200px] leading-relaxed px-4">
             We are going to launch our website very soon.<br />
             Stay tuned for an all-new online shopping experience
           </p>
