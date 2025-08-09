@@ -169,12 +169,12 @@ export default function Hero() {
         {/* Content spacing */}
         <div className="mt-2 sm:mt-4 md:mt-4 lg:mt-4 2xl:mt-8 flex flex-col items-center justify-center gap-2 sm:gap-5 md:gap-6 2xl:gap-12">
           {/* Main Heading - UPDATED larger mobile text for better readability */}
-          <h1 className="font-heading text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-8xl 4xl:text-[140px] font-semibold text-[var(--color-neutral-800)] leading-tight text-center">
+          <h1 className="font-heading text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-8xl 4xl:text-[140px] font-semibold text-[var(--color-neutral-800)] leading-tight text-center">
             Powering Up<br />Something Exciting
           </h1>
 
           {/* Subheading - UPDATED larger mobile text for better readability */}
-          <p className="font-body text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-3xl 4xl:text-[48px] font-normal text-[var(--color-neutral-500)] text-center max-w-xs sm:max-w-md md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl 4xl:max-w-[1200px] leading-relaxed">
+          <p className="font-body text-m sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-3xl 4xl:text-[48px] font-normal text-[var(--color-neutral-500)] text-center max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl 4xl:max-w-[1200px] leading-relaxed">
             We are going to launch our website very soon.<br />
             Stay tuned for an all-new online shopping experience
           </p>
