@@ -155,7 +155,7 @@ export default function Hero() {
         priority
       />
 
-      {/* Main Content Block (Centered) - UPDATED with increased margins for better text wrapping */}
+      {/* Main Content Block (Centered) - Mobile optimized spacing, desktop unchanged */}
       <div className="relative z-20 mx-auto flex w-full flex-col items-center justify-center px-8 sm:px-8 max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-5xl 4xl:max-w-[1600px] mt-4 sm:mt-0">
 
         {/* Tagline - UPDATED 4xl styles */}
@@ -168,14 +168,16 @@ export default function Hero() {
 
         {/* Content spacing */}
         <div className="mt-2 sm:mt-4 md:mt-4 lg:mt-4 2xl:mt-8 flex flex-col items-center justify-center gap-3 sm:gap-5 md:gap-6 2xl:gap-12">
-          {/* Main Heading - UPDATED with better wrapping space */}
-          <h1 className="font-heading text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl 4xl:text-[140px] font-semibold text-[var(--color-neutral-800)] leading-tight text-center max-w-xs sm:max-w-sm md:max-w-md">
-            Powering Up Something Exciting
+          {/* Main Heading - Mobile optimized with more space, desktop unchanged */}
+          <h1 className="font-heading text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl 4xl:text-[140px] font-semibold text-[var(--color-neutral-800)] leading-tight text-center">
+            <span className="block sm:hidden max-w-sm mx-auto">Powering Up Something Exciting</span>
+            <span className="hidden sm:block">Powering Up<br />Something Exciting</span>
           </h1>
 
-          {/* Subheading - UPDATED with better wrapping space */}
-          <p className="font-body text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl 4xl:text-[48px] font-normal text-[var(--color-neutral-500)] text-center max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl 4xl:max-w-[1200px] leading-relaxed">
-            We are going to launch our website very soon. Stay tuned for an all-new online shopping experience
+          {/* Subheading - Mobile optimized with more space, desktop unchanged */}
+          <p className="font-body text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl 4xl:text-[48px] font-normal text-[var(--color-neutral-500)] text-center leading-relaxed">
+            <span className="block sm:hidden max-w-sm mx-auto">We are going to launch our website very soon. Stay tuned for an all-new online shopping experience</span>
+            <span className="hidden sm:block max-w-xs sm:max-w-md md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl 4xl:max-w-[1200px] mx-auto">We are going to launch our website very soon.<br />Stay tuned for an all-new online shopping experience</span>
           </p>
         </div>
 
