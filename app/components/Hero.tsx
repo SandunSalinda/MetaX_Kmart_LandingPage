@@ -155,8 +155,8 @@ export default function Hero() {
         priority
       />
 
-      {/* Main Content Block (Centered) - UPDATED 4xl max-width */}
-      <div className="relative z-20 mx-auto flex w-full flex-col items-center justify-center px-4 sm:px-8 max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-5xl 4xl:max-w-[1600px] mt-4 sm:mt-0">
+      {/* Main Content Block (Centered) - UPDATED for better mobile spacing */}
+      <div className="relative z-20 mx-auto flex w-full flex-col items-center justify-center px-6 sm:px-8 max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-5xl 4xl:max-w-[1600px] mt-4 sm:mt-0">
 
         {/* Tagline - UPDATED 4xl styles */}
         <div className="inline-flex items-center justify-center gap-1 2xl:gap-2 rounded-[60px] 4xl:rounded-[120px] outline outline-1 4xl:outline-2 outline-offset-[-1px] 4xl:outline-offset-[-2px] outline-[var(--color-neutral-800)] px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 2xl:px-6 2xl:py-3 4xl:px-8 4xl:py-4 text-center text-[8px] sm:text-[10px] md:text-[11px] lg:text-xs xl:text-sm 2xl:text-base 4xl:text-[24px]">
@@ -167,14 +167,14 @@ export default function Hero() {
         </div>
 
         {/* Content spacing */}
-        <div className="mt-2 sm:mt-4 md:mt-4 lg:mt-4 2xl:mt-8 flex flex-col items-center justify-center gap-2 sm:gap-5 md:gap-6 2xl:gap-12">
-          {/* Main Heading - UPDATED larger mobile text for better readability */}
-          <h1 className="font-heading text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-8xl 4xl:text-[140px] font-semibold text-[var(--color-neutral-800)] leading-tight text-center">
+        <div className="mt-2 sm:mt-4 md:mt-4 lg:mt-4 2xl:mt-8 flex flex-col items-center justify-center gap-3 sm:gap-5 md:gap-6 2xl:gap-12">
+          {/* Main Heading - UPDATED much larger mobile text with better spacing */}
+          <h1 className="font-heading text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl 4xl:text-[140px] font-semibold text-[var(--color-neutral-800)] leading-tight text-center px-2">
             Powering Up<br />Something Exciting
           </h1>
 
-          {/* Subheading - UPDATED larger mobile text for better readability */}
-          <p className="font-body text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-3xl 4xl:text-[48px] font-normal text-[var(--color-neutral-500)] text-center max-w-xs sm:max-w-md md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl 4xl:max-w-[1200px] leading-relaxed">
+          {/* Subheading - UPDATED much larger mobile text with better spacing */}
+          <p className="font-body text-lg sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl 4xl:text-[48px] font-normal text-[var(--color-neutral-500)] text-center max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl 4xl:max-w-[1200px] leading-relaxed px-4">
             We are going to launch our website very soon.<br />
             Stay tuned for an all-new online shopping experience
           </p>
