@@ -1,9 +1,9 @@
-/* app/globals.css */
+/* app/globals.css - TARGETED CHROME COMPATIBILITY FIXES */
 
-/* Remove any @import url(...) for fonts here. Use next/font in layout.tsx */
-@import "tailwindcss"; /* Keep this, or replace with @tailwind directives if necessary */
+/* Keep your existing imports */
+@import "tailwindcss";
 
-/* Add your custom theme definitions */
+/* Keep your existing @theme inline block EXACTLY as it was */
 @theme inline {
   /* Existing Geist font variables */
   --font-geist-sans: var(--font-geist-sans);
@@ -14,47 +14,25 @@
   --font-inter: var(--font-inter);
 
   /* Define your primary font utilities based on the new variables */
-  --font-sans-default: var(--font-inter); /* Example: Inter as default sans-serif */
-  --font-heading: var(--font-plus-jakarta-sans); /* Plus Jakarta Sans for headings */
+  --font-sans-default: var(--font-inter);
+  --font-heading: var(--font-plus-jakarta-sans);
 
   /* Define colors based on your Figma design / plugin output */
-  --color-neutral-800: #262626; /* Adjust exact hex code from Figma */
-  --color-neutral-500: #737373; /* Adjust exact hex code from Figma */
-  --color-rose-500: #F43F5E; /* Adjust exact hex code from Figma */
-  --color-rose-600: #E11D48; /* For hover states or darker accents */
-  --color-zinc-600: #525252; /* Adjust exact hex code from Figma */
-  --color-zinc-900: #18181B; /* Adjust exact hex code from Figma */
+  --color-neutral-800: #262626;
+  --color-neutral-500: #737373;
+  --color-rose-500: #F43F5E;
+  --color-rose-600: #E11D48;
+  --color-zinc-600: #525252;
+  --color-zinc-900: #18181B;
   --color-black: #000000;
   --color-white: #ffffff;
-  --color-red-600: #DC2626; /* If this is used for the logo and distinct from rose */
-  --color-yellow-200: #FDE047; /* For the hero section element */
-  --color-green-400: #4ade80; /* For the hero section element */
-
-
-  /* Define custom font sizes if your design deviates from Tailwind defaults significantly */
-  /* Example:
-  --font-size-3xl: 32px; // for text-3xl
-  --font-size-base: 16px; // for text-base
-  --font-size-5xl: 48px; // for text-5xl (Why Shop title)
-  --font-size-8xl: 96px; // for text-8xl (Powering Up title)
-  */
-
-  /* Define custom spacing if your design deviates from Tailwind defaults */
-  /* Example:
-  --spacing-1: 4px; // for p-1, m-1
-  --spacing-2: 8px; // for p-2, m-2
-  --spacing-3: 12px; // for p-3, m-3
-  --spacing-4: 16px; // for p-4, m-4
-  --spacing-6: 24px; // for p-6, m-6
-  --spacing-8: 32px; // for p-8, m-8
-  --spacing-12: 48px; // for p-12, m-12
-  --spacing-28: 112px; // for px-28 (from Header) -> convert to proper Tailwind scale if possible
-  */
+  --color-red-600: #DC2626;
+  --color-yellow-200: #FDE047;
+  --color-green-400: #4ade80;
 }
 
-/* Add custom utilities if you want to use simpler class names for your theme variables */
+/* Keep your existing utilities */
 @layer utilities {
-  /* Font utilities */
   .font-heading {
     font-family: var(--font-heading);
   }
@@ -62,25 +40,21 @@
     font-family: var(--font-body);
   }
 
-  /* Color utilities (if you don't want to use directly like text-[var(--color-neutral-800)]) */
   .text-neutral-800 { color: var(--color-neutral-800); }
   .text-neutral-500 { color: var(--color-neutral-500); }
   .bg-rose-500 { background-color: var(--color-rose-500); }
   .bg-rose-600 { background-color: var(--color-rose-600); }
   .text-white { color: var(--color-white); }
   .bg-white { background-color: var(--color-white); }
-  .bg-red-600 { background-color: var(--color-red-600); } /* If you need this specific red */
+  .bg-red-600 { background-color: var(--color-red-600); }
   .bg-yellow-200 { background-color: var(--color-yellow-200); }
   .bg-green-400 { background-color: var(--color-green-400); }
-  /* Define custom font sizes using vars if you didn't define them in @theme and want custom utilities */
-  .text-h1 { font-size: var(--font-size-h1); } /* If you defined --font-size-h1 in @theme */
 }
 
-
-/* Existing :root variables (from your original code) */
+/* Keep your existing :root variables */
 :root {
   --background: #ffffff;
-  --foreground: #ffffff;
+  --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -90,13 +64,369 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  /* Use your defined font variable for the body */
-  font-family: var(--font-body), sans-serif; /* Fallback to generic sans-serif */
+/* Base resets */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html {
   scroll-behavior: smooth;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), sans-serif;
+  min-height: 100vh;
+  min-height: 100dvh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Chrome-specific utility classes */
+@layer utilities {
+  /* Chrome transform fixes */
+  .chrome-transform-fix {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+  }
+  
+  /* Chrome blur fix */
+  .chrome-blur-fix {
+    will-change: filter;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    isolation: isolate;
+  }
+
+  /* Chrome responsive fix */
+  .chrome-responsive-fix {
+    min-width: 0;
+    flex-shrink: 1;
+    max-width: 100%;
+  }
+  
+  /* Chrome hero image stability fix */
+  .chrome-hero-stable {
+    contain: layout style paint;
+    isolation: isolate;
+  }
+}
+
+/* TARGETED Chrome-specific fixes for Hero section only */
+/* Using -webkit-min-device-pixel-ratio to target Chrome/Safari */
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+  /* Target Chrome specifically, not Edge */
+  @supports (-webkit-appearance:none) and (not (stroke-color:transparent)) {
+    
+    /* Chrome-specific Hero adjustments for laptop screens (1366-1920px) */
+    @media (min-width: 1024px) and (max-width: 1920px) {
+      /* Reduce spacing between heading and subheading on Chrome for laptops */
+      .chrome-hero .flex.flex-col.items-center.justify-center.gap-3 {
+        gap: 1rem !important; /* Reduced from default gap-3 */
+      }
+      
+      /* Scale down heading on Chrome for laptops */
+      .chrome-hero .chrome-heading {
+        font-size: calc(0.7 * 4rem) !important; /* lg screens */
+      }
+      
+      @media (min-width: 1280px) {
+        .chrome-hero .chrome-heading {
+          font-size: calc(0.7 * 5rem) !important; /* xl screens */
+        }
+      }
+      
+      @media (min-width: 1536px) {
+        .chrome-hero .chrome-heading {
+          font-size: calc(0.7 * 6rem) !important; /* 2xl screens */
+        }
+      }
+      
+      /* Scale down subheading on Chrome for laptops */
+      .chrome-hero .chrome-subheading {
+        font-size: calc(0.6 * 1.25rem) !important; /* lg screens */
+      }
+      
+      @media (min-width: 1280px) {
+        .chrome-hero .chrome-subheading {
+          font-size: calc(0.6 * 1.5rem) !important; /* xl screens */
+        }
+      }
+      
+      @media (min-width: 1536px) {
+        .chrome-hero .chrome-subheading {
+          font-size: calc(0.6 * 1.875rem) !important; /* 2xl screens */
+        }
+      }
+      
+      /* Scale down tagline on Chrome for laptops */
+      .chrome-hero .chrome-tagline {
+        transform: scale(0.8);
+        transform-origin: center;
+      }
+      
+      /* Scale down email container on Chrome for laptops */
+      .chrome-hero .chrome-email-container {
+        transform: scale(0.8);
+        transform-origin: center;
+        margin-top: 1rem !important; /* Reduced from 2rem */
+        margin-bottom: 2rem !important; /* Add bottom margin to create space from social icons */
+      }
+      
+      /* Scale down social icons on Chrome for laptops */
+      .chrome-hero .chrome-social-icons {
+        transform: scale(0.9);
+        transform-origin: center;
+      }
+    }
+    
+    /* NEW: Chrome-specific image scaling and positioning fixes - STABILIZED */
+    @media (min-width: 1024px) and (max-width: 1920px) {
+      /* Scale down all hero images on Chrome for laptop screens - Use specific classes */
+      .chrome-hero .chrome-hero-image-1,
+      .chrome-hero .chrome-hero-image-2,
+      .chrome-hero .chrome-hero-image-3,
+      .chrome-hero .chrome-hero-image-4 {
+        will-change: transform !important;
+        transform-origin: center center !important;
+        backface-visibility: hidden !important;
+        -webkit-backface-visibility: hidden !important;
+      }
+      
+      /* Headphones (top-left) - Use specific class - STABILIZED */
+      .chrome-hero .chrome-hero-image-1 {
+        left: 12% !important;
+        top: 10% !important;
+        transform: scale(0.65) rotate(-9.08deg) !important;
+        transform-origin: center center !important;
+        will-change: transform !important;
+        backface-visibility: hidden !important;
+        -webkit-backface-visibility: hidden !important;
+      }
+      
+      /* Gimbal (top-right) - Use specific class - STABILIZED */
+      .chrome-hero .chrome-hero-image-2 {
+        right: 10% !important;
+        top: -10 !important; /* Moved higher up from -15% */
+        transform: scale(0.65) rotate(0deg) !important;
+        transform-origin: center center !important;
+        will-change: transform !important;
+        backface-visibility: hidden !important;
+        -webkit-backface-visibility: hidden !important;
+      }
+      
+      /* JBL Speaker (bottom-left) - Use specific class - STABILIZED */
+      .chrome-hero .chrome-hero-image-3 {
+        left: 8% !important;
+        bottom: -10% !important;
+        transform: scale(0.65) rotate(-5.91deg) !important;
+        transform-origin: center center !important;
+        will-change: transform !important;
+        backface-visibility: hidden !important;
+        -webkit-backface-visibility: hidden !important;
+      }
+      
+      /* Ring Light (bottom-right) - Use specific class - STABILIZED */
+      .chrome-hero .chrome-hero-image-4 {
+        right: 12% !important;
+        bottom: -2% !important;
+        transform: scale(0.75) rotate(5.03deg) !important;
+        transform-origin: center center !important;
+        will-change: transform !important;
+        backface-visibility: hidden !important;
+        -webkit-backface-visibility: hidden !important;
+      }
+    }
+    
+    /* Chrome-specific fixes for 2K monitors (1440p) and larger */
+    @media (min-width: 1921px) and (max-width: 2560px) {
+      /* Scale down text elements for 2K screens */
+
+      .chrome-hero .chrome-heading {
+        font-size: calc(1 * 6rem) !important; /* Scale down from 2xl */
+      }
+      
+      .chrome-hero .chrome-subheading {
+        font-size: calc(0.85 * 1.875rem) !important; /* Scale down from 2xl */
+      }
+      
+      .chrome-hero .chrome-tagline {
+        transform: scale(0.85);
+        transform-origin: center;
+      }
+      
+      .chrome-hero .chrome-email-container {
+        transform: scale(0.85);
+        transform-origin: center;
+        margin-top: 3rem !important;
+      }
+      
+      .chrome-hero .chrome-social-icons {
+        transform: scale(0.85);
+        transform-origin: center;
+      }
+      
+      /* Reduce spacing for 2K screens */
+      .chrome-hero .flex.flex-col.items-center.justify-center.gap-3 {
+        gap: 1rem !important;
+      }
+      
+      /* Scale and position images properly for 2K screens - Use specific classes */
+      .chrome-hero .chrome-hero-image-1,
+      .chrome-hero .chrome-hero-image-2,
+      .chrome-hero .chrome-hero-image-3,
+      .chrome-hero .chrome-hero-image-4 {
+        will-change: transform !important;
+        transform-origin: center center !important;
+        backface-visibility: hidden !important;
+        -webkit-backface-visibility: hidden !important;
+      }
+      
+      /* Headphones (top-left) - better positioning for 2K */
+      .chrome-hero .chrome-hero-image-1 {
+        left: 22% !important;
+        top: 15% !important;
+        transform: scale(1) rotate(-9.08deg) !important;
+      }
+      
+      /* Gimbal (top-right) - better positioning for 2K */
+      .chrome-hero .chrome-hero-image-2 {
+        right: 20% !important;
+        top: 10% !important;
+        transform: scale(1) rotate(0deg) !important;
+      }
+      
+      /* JBL Speaker (bottom-left) - better positioning for 2K */
+      .chrome-hero .chrome-hero-image-3 {
+        left: 20% !important;
+        bottom: 8% !important;
+        transform: scale(1) rotate(-5.91deg) !important;
+      }
+      
+      /* Ring Light (bottom-right) - better positioning for 2K */
+      .chrome-hero .chrome-hero-image-4 {
+        right: 20% !important;
+        bottom: 12% !important;
+        transform: scale(1) rotate(5.03deg) !important;
+      }
+    }
+    
+    /* Chrome-specific fixes for 4K monitors and ultra-wide */
+    @media (min-width: 2561px) {
+      /* Text elements scale normally on 4K+ screens */
+      .chrome-hero .chrome-heading {
+        font-size: inherit !important;
+      }
+      
+      .chrome-hero .chrome-subheading {
+        font-size: inherit !important;
+      }
+      
+      .chrome-hero .chrome-tagline,
+      .chrome-hero .chrome-email-container,
+      .chrome-hero .chrome-social-icons {
+        transform: none !important;
+      }
+      
+      /* Images back to normal scale on 4K+ screens */
+      .chrome-hero .absolute:has(img) {
+        transform: inherit !important;
+      }
+      
+      .chrome-hero .absolute:nth-of-type(1):has(img) {
+        left: inherit !important;
+        top: inherit !important;
+        transform: rotate(-9.08deg) !important;
+      }
+      
+      .chrome-hero .absolute:nth-of-type(2):has(img) {
+        right: inherit !important;
+        top: inherit !important;
+        transform: rotate(0deg) !important;
+      }
+      
+      .chrome-hero .absolute:nth-of-type(3):has(img) {
+        left: inherit !important;
+        bottom: inherit !important;
+        transform: rotate(-5.91deg) !important;
+      }
+      
+      .chrome-hero .absolute:nth-of-type(4):has(img) {
+        right: inherit !important;
+        bottom: inherit !important;
+        transform: rotate(5.03deg) !important;
+      }
+    }
+    
+    /* Larger screens - scale back to normal for desktop */
+    @media (min-width: 1921px) {
+      /* This media query is now handled above with specific ranges */
+    }
+    
+    /* Fix for mobile and tablet - no scaling needed */
+    @media (max-width: 1023px) {
+      .chrome-hero .chrome-heading,
+      .chrome-hero .chrome-subheading {
+        font-size: inherit !important;
+      }
+      
+      .chrome-hero .chrome-tagline,
+      .chrome-hero .chrome-email-container,
+      .chrome-hero .chrome-social-icons {
+        transform: none !important;
+      }
+      
+      .chrome-hero .absolute:has(img) {
+        transform: inherit !important;
+      }
+      
+      .chrome-hero .absolute:nth-of-type(1):has(img) {
+        left: inherit !important;
+        transform: rotate(-9.08deg) !important;
+      }
+      
+      .chrome-hero .absolute:nth-of-type(2):has(img) {
+        right: inherit !important;
+        transform: rotate(0deg) !important;
+      }
+      
+      .chrome-hero .absolute:nth-of-type(3):has(img) {
+        left: inherit !important;
+        bottom: inherit !important;
+        transform: rotate(-5.91deg) !important;
+      }
+      
+      .chrome-hero .absolute:nth-of-type(4):has(img) {
+        right: inherit !important;
+        bottom: inherit !important;
+        transform: rotate(5.03deg) !important;
+      }
+    }
+  }
+}
+
+/* Edge-specific override to ensure no scaling is applied */
+@supports (-ms-ime-align:auto) {
+  .chrome-hero .chrome-heading,
+  .chrome-hero .chrome-subheading {
+    font-size: inherit !important;
+  }
+  
+  .chrome-hero .chrome-tagline,
+  .chrome-hero .chrome-email-container,
+  .chrome-hero .chrome-social-icons {
+    transform: none !important;
+  }
+  
+  .chrome-hero .absolute:has(img) {
+    transform: inherit !important;
+  }
 }
