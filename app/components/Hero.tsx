@@ -184,7 +184,7 @@ export default function Hero() {
       </div>
 
       {/* Item 5: Center Gimbal (Mobile Only) */}
-      <div className="absolute left-[50%] bottom-[-18%] 
+      <div className="absolute left-[50%] bottom-[3%] 
                       w-[125px] h-[135px]
                       sm:hidden z-0"
            style={{ 
