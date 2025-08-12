@@ -141,7 +141,7 @@ export default function Hero() {
       {/* Mobile Images Row - Inline layout for mobile only */}
       <div className="absolute bottom-[-5%] left-[48%] transform -translate-x-1/2 flex items-center justify-center gap-[-3] sm:hidden z-0">
         {/* JBL Speaker */}
-        <div className="w-[120px] h-[118px] flex-shrink-0"
+        <div className="w-[120px] h-[120px] flex-shrink-0"
              style={{ 
                transform: 'rotate(10deg)',
                backfaceVisibility: 'hidden',
@@ -157,7 +157,7 @@ export default function Hero() {
         </div>
         
         {/* Center Gimbal */}
-        <div className="w-[140px] h-[140px] flex-shrink-0"
+        <div className="w-[135px] h-[145px] flex-shrink-0"
              style={{ 
                transform: 'rotate(-11deg)',
                backfaceVisibility: 'hidden',
