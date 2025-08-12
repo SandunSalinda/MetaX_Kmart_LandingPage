@@ -60,7 +60,7 @@ export default function Hero() {
 
   // Memoized class name to prevent changes during re-renders - STABILIZED
   const sectionClassName = React.useMemo(() => {
-    return `relative flex min-h-[70vh] sm:min-h-[calc(100vh-68px)] w-full flex-col items-center justify-start pt-8 sm:justify-center px-4 py-4 text-center sm:py-12 md:py-16 lg:py-28 xl:py-32 2xl:py-40 4xl:py-64 mb-4 sm:mb-20 md:mb-28 ${isChrome ? 'chrome-hero chrome-hero-stable' : ''}`;
+    return `relative flex min-h-[70vh] sm:min-h-[calc(100vh-68px)] w-full flex-col items-center justify-start pt-8 sm:justify-center px-4 py-4 text-center sm:py-12 md:py-16 lg:py-28 xl:py-32 2xl:py-40 4xl:py-64 mb-8 sm:mb-20 md:mb-28 ${isChrome ? 'chrome-hero chrome-hero-stable' : ''}`;
   }, [isChrome]);
 
   // Memoized image container style to prevent re-renders - PREVENTS JUMPING
@@ -215,7 +215,7 @@ export default function Hero() {
         {/* Content spacing */}
         <div className="mt-2 sm:mt-2 md:mt-2 lg:mt-2 2xl:mt-2 flex flex-col items-center justify-center gap-4 sm:gap-4 md:gap-5 2xl:gap-12s">
           {/* Main Heading */}
-          <h1 className="font-heading font-semibold text-[var(--color-neutral-800)] leading-tight text-center chrome-heading text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl 4xl:text-[140px]">
+          <h1 className="font-heading font-bold text-[var(--color-neutral-800)] leading-tight text-center chrome-heading text-[42px] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl 4xl:text-[140px]">
             <span className="block sm:hidden max-w-sm mx-auto">Powering Up Something Exciting</span>
             <span className="hidden sm:block">Powering Up<br />Something Exciting</span>
           </h1>
@@ -228,28 +228,28 @@ export default function Hero() {
         </div>
 
         {/* Email Input and Notify Me Button */}
-        <div className="mt-4 sm:mt-8 md:mt-10 lg:mt-12 2xl:mt-24 flex w-full max-w-[280px] sm:max-w-sm md:max-w-lg xl:max-w-xl 2xl:max-w-2xl 4xl:max-w-[1024px] items-center rounded-[60px] 2xl:rounded-[120px] bg-[var(--color-white)] p-1 sm:p-2 md:p-2.5 lg:p-3 2xl:p-4 4xl:p-6 shadow-[0_4px_18px_0_rgba(0,0,0,0.13)] 2xl:shadow-[0_8px_36px_0_rgba(0,0,0,0.13)] chrome-email-container">
+        <div className="mt-4 sm:mt-8 md:mt-10 lg:mt-12 2xl:mt-24 flex w-full max-w-[340px] sm:max-w-sm md:max-w-lg xl:max-w-xl 2xl:max-w-2xl 4xl:max-w-[1024px] items-center rounded-[60px] 2xl:rounded-[120px] bg-[var(--color-white)] p-1.5 sm:p-2 md:p-2.5 lg:p-3 2xl:p-4 4xl:p-6 shadow-[0_4px_18px_0_rgba(0,0,0,0.13)] 2xl:shadow-[0_8px_36px_0_rgba(0,0,0,0.13)] chrome-email-container">
           <input
             ref={emailInputRef}
             type="email"
             placeholder="Enter your email"
-            className="flex-1 min-w-0 h-[28px] sm:h-[32px] md:h-[36px] lg:h-[40px] xl:h-[48px] 2xl:h-[60px] 4xl:h-[88px] rounded-[60px] 2xl:rounded-[120px] px-2 sm:px-3 md:px-4 2xl:px-8 text-[10px] sm:text-xs md:text-sm xl:text-base 2xl:text-xl 4xl:text-[28px] font-normal text-[var(--color-zinc-600)] outline-none bg-transparent mr-1 sm:mr-1.5 md:mr-2 2xl:mr-4"
+            className="flex-1 min-w-0 h-[36px] sm:h-[36px] md:h-[36px] lg:h-[40px] xl:h-[48px] 2xl:h-[60px] 4xl:h-[88px] rounded-[60px] 2xl:rounded-[120px] px-3 sm:px-3 md:px-4 2xl:px-8 text-[14px] sm:text-xs md:text-sm xl:text-base 2xl:text-xl 4xl:text-[28px] font-normal text-[var(--color-zinc-600)] outline-none bg-transparent mr-1.5 sm:mr-1.5 md:mr-2 2xl:mr-4"
             aria-label="Enter your email address for notifications"
           />
           <button
             onClick={handleNotifyMeClick}
-            className="flex-shrink-0 flex items-center justify-center gap-0.5 sm:gap-1 md:gap-2 4xl:gap-4 rounded-[60px] 2xl:rounded-[120px] bg-[var(--color-neutral-800)] px-1.5 sm:px-2.5 md:px-3 lg:px-4 2xl:px-6 4xl:px-10 h-[28px] sm:h-[32px] md:h-[36px] lg:h-[40px] xl:h-[48px] 2xl:h-[60px] 4xl:h-[88px] transition-colors duration-200 hover:bg-[var(--color-rose-500)] focus:outline-none focus:ring-2 2xl:focus:ring-4 focus:ring-[var(--color-neutral-800)] focus:ring-offset-2 2xl:focus:ring-offset-4 whitespace-nowrap"
+            className="flex-shrink-0 flex items-center justify-center gap-0.5 sm:gap-1 md:gap-2 4xl:gap-4 rounded-[60px] 2xl:rounded-[120px] bg-[var(--color-neutral-800)] px-2 sm:px-2.5 md:px-3 lg:px-4 2xl:px-6 4xl:px-10 h-[36px] sm:h-[32px] md:h-[36px] lg:h-[40px] xl:h-[48px] 2xl:h-[60px] 4xl:h-[88px] transition-colors duration-200 hover:bg-[var(--color-rose-500)] focus:outline-none focus:ring-2 2xl:focus:ring-4 focus:ring-[var(--color-neutral-800)] focus:ring-offset-2 2xl:focus:ring-offset-4 whitespace-nowrap"
             aria-label="Notify Me"
           >
-            <span className="font-heading text-[9px] sm:text-[10px] md:text-xs lg:text-sm xl:text-base 2xl:text-xl 4xl:text-[28px] font-medium text-[var(--color-white)] leading-none">Notify Me</span>
-            <Image src="/arrow.svg" alt="Arrow" width={10} height={10} className="sm:w-3 sm:h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 2xl:w-8 2xl:h-8 4xl:w-12 4xl:h-12" />
+            <span className="font-heading text-[11px] sm:text-[10px] md:text-xs lg:text-sm xl:text-base 2xl:text-xl 4xl:text-[28px] font-medium text-[var(--color-white)] leading-none">Notify Me</span>
+            <Image src="/arrow.svg" alt="Arrow" width={12} height={12} className="sm:w-3 sm:h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 2xl:w-8 2xl:h-8 4xl:w-12 4xl:h-12" />
           </button>
         </div>
 
       </div>
 
       {/* Social Media Icons */}
-      <div className="absolute bottom-[5%] sm:bottom-10 md:bottom-12 2xl:bottom-24 left-1/2 -translate-x-1/2 transform inline-flex items-center justify-center gap-2 sm:gap-3 md:gap-4 2xl:gap-8 z-20 chrome-social-icons">
+      <div className="absolute bottom-[-2%] sm:bottom-10 md:bottom-12 2xl:bottom-24 left-1/2 -translate-x-1/2 transform inline-flex items-center justify-center gap-2 sm:gap-3 md:gap-4 2xl:gap-8 z-20 chrome-social-icons">
         <Link href="https://www.facebook.com/share/12L2oSJptNF/" target="_blank" className="flex h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 2xl:h-16 2xl:w-16 4xl:h-20 4xl:w-20 items-center justify-center rounded-[14px] sm:rounded-[16px] md:rounded-[20px] 2xl:rounded-[32px] 4xl:rounded-[40px] bg-[var(--color-neutral-800)] p-1 sm:p-1.5 md:p-2 2xl:p-4 transition-all duration-200 hover:scale-110 focus:outline-none">
           <Facebook01Icon size={16} className="sm:w-6 sm:h-6 md:w-6 md:h-6" color="#ffffffff" />
         </Link>
