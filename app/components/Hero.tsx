@@ -139,11 +139,11 @@ export default function Hero() {
       </div>
 
       {/* Mobile Images Row - Inline layout for mobile only */}
-      <div className="absolute bottom-[-5%] left-[48%] transform -translate-x-1/2 flex items-center justify-center gap-2 sm:hidden z-0">
+      <div className="absolute bottom-[-5%] left-[48%] transform -translate-x-1/2 flex items-center justify-center gap-[-3] sm:hidden z-0">
         {/* JBL Speaker */}
         <div className="w-[120px] h-[118px] flex-shrink-0"
              style={{ 
-               transform: 'rotate(11deg)',
+               transform: 'rotate(10deg)',
                backfaceVisibility: 'hidden',
                WebkitBackfaceVisibility: 'hidden'
              }}>
@@ -175,7 +175,7 @@ export default function Hero() {
         {/* Ring Light */}
         <div className="w-[94px] h-[94px] flex-shrink-0"
              style={{ 
-               transform: 'rotate(-5deg)',
+               transform: 'rotate(-5.5deg)',
                backfaceVisibility: 'hidden',
                WebkitBackfaceVisibility: 'hidden'
              }}>
