@@ -138,7 +138,7 @@ export default function Hero() {
       </div>
 
       {/* Item 3: Bottom-Left (Speaker) - STABILIZED */}
-      <div className="absolute left-[5%] bottom-[5%] 
+      <div className="absolute left-[5%] bottom-[-2%] 
                       w-[110px] h-[110px]
                       sm:w-[125px] sm:h-[125px] sm:left-[10%] sm:bottom-[8%] 
                       md:w-[160px] md:h-[160px] md:left-[10%] md:bottom-[-5%] 
@@ -161,7 +161,7 @@ export default function Hero() {
       </div>
 
       {/* Item 4: Bottom-Right (Ring Light) - STABILIZED */}
-      <div className="absolute right-[8%] bottom-[7%] 
+      <div className="absolute right-[8%] bottom-[0%] 
                       w-[80px] h-[75px]
                       sm:w-[90px] sm:h-[85px] sm:right-[8%] sm:bottom-[15%] 
                       md:w-[110px] md:h-[105px] md:right-[10%] md:bottom-[-5%] 
@@ -184,7 +184,7 @@ export default function Hero() {
       </div>
 
       {/* Item 5: Center Gimbal (Mobile Only) */}
-      <div className="absolute left-[50%] bottom-[6%] 
+      <div className="absolute left-[50%] bottom-[-1%] 
                       w-[125px] h-[135px]
                       sm:hidden z-0"
            style={{ 
@@ -215,9 +215,9 @@ export default function Hero() {
         {/* Content spacing */}
         <div className="mt-2 sm:mt-2 md:mt-2 lg:mt-2 2xl:mt-2 flex flex-col items-center justify-center gap-4 sm:gap-4 md:gap-5 2xl:gap-12s">
           {/* Main Heading */}
-          <h1 className="font-heading font-bold text-[var(--color-neutral-800)] leading-tight text-center chrome-heading text-[42px] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl 4xl:text-[140px]">
-            <span className="block sm:hidden max-w-sm mx-auto">Powering Up Something Exciting</span>
-            <span className="hidden sm:block">Powering Up<br />Something Exciting</span>
+          <h1 className="font-heading text-[var(--color-neutral-800)] leading-tight text-center chrome-heading text-[42px] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl 4xl:text-[140px]" style={{ fontWeight: '650' }}>
+            <span className="block sm:hidden max-w-sm mx-auto" style={{ fontWeight: '650' }}>Powering Up Something Exciting</span>
+            <span className="hidden sm:block" style={{ fontWeight: '600' }}>Powering Up<br />Something Exciting</span>
           </h1>
 
           {/* Subheading */}
@@ -249,7 +249,7 @@ export default function Hero() {
       </div>
 
       {/* Social Media Icons */}
-      <div className="absolute bottom-[-2%] sm:bottom-10 md:bottom-12 2xl:bottom-24 left-1/2 -translate-x-1/2 transform inline-flex items-center justify-center gap-2 sm:gap-3 md:gap-4 2xl:gap-8 z-20 chrome-social-icons">
+      <div className="absolute bottom-[-8%] sm:bottom-10 md:bottom-12 2xl:bottom-24 left-1/2 -translate-x-1/2 transform inline-flex items-center justify-center gap-2 sm:gap-3 md:gap-4 2xl:gap-8 z-20 chrome-social-icons">
         <Link href="https://www.facebook.com/share/12L2oSJptNF/" target="_blank" className="flex h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 2xl:h-16 2xl:w-16 4xl:h-20 4xl:w-20 items-center justify-center rounded-[14px] sm:rounded-[16px] md:rounded-[20px] 2xl:rounded-[32px] 4xl:rounded-[40px] bg-[var(--color-neutral-800)] p-1 sm:p-1.5 md:p-2 2xl:p-4 transition-all duration-200 hover:scale-110 focus:outline-none">
           <Facebook01Icon size={16} className="sm:w-6 sm:h-6 md:w-6 md:h-6" color="#ffffffff" />
         </Link>
