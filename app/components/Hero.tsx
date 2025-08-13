@@ -101,7 +101,7 @@ export default function Hero() {
         </div>
 
         {/* Mobile Images Row - Show after subheading on mobile only */}
-        <div className="mt-8 flex items-center justify-center sm:hidden z-10 relative">
+        <div className="mt-8 -ml-3 flex items-center justify-center sm:hidden z-10 relative">
           {/* JBL Speaker */}
           <div className="w-[120px] h-[120px] flex-shrink-0 -mr-3"
                style={{ 
