@@ -100,6 +100,57 @@ export default function Hero() {
           </p>
         </div>
 
+        {/* Mobile Images Row - Show after subheading on mobile only */}
+        <div className="mt-8 flex items-center justify-center sm:hidden z-10 relative">
+          {/* JBL Speaker */}
+          <div className="w-[120px] h-[120px] flex-shrink-0 -mr-3"
+               style={{ 
+                 transform: 'rotate(11deg)',
+                 backfaceVisibility: 'hidden',
+                 WebkitBackfaceVisibility: 'hidden'
+               }}>
+            <Image
+              src="/jbl card.png"
+              alt="Speaker on yellow background"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+          
+          {/* Center Gimbal */}
+          <div className="w-[135px] h-[140px] flex-shrink-0 -mx-2"
+               style={{ 
+                 transform: 'rotate(-12deg)',
+                 backfaceVisibility: 'hidden',
+                 WebkitBackfaceVisibility: 'hidden'
+               }}>
+            <Image
+              src="/gimble card.png"
+              alt="Gimbal on green background"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+          
+          {/* Ring Light */}
+          <div className="w-[94px] h-[94px] flex-shrink-0 -ml-2"
+               style={{ 
+                 transform: 'rotate(-5.5deg)',
+                 backfaceVisibility: 'hidden',
+                 WebkitBackfaceVisibility: 'hidden'
+               }}>
+            <Image
+              src="/ringlight card.png"
+              alt="Ring light on red background"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+        </div>
+
         {/* Email Input and Notify Me Button */}
         <div className="mt-4 sm:mt-8 md:mt-10 lg:mt-12 2xl:mt-24 flex w-full max-w-[340px] sm:max-w-sm md:max-w-lg xl:max-w-xl 2xl:max-w-2xl 4xl:max-w-[1024px] items-center rounded-[60px] 2xl:rounded-[120px] bg-[var(--color-white)] p-1.5 sm:p-2 md:p-2.5 lg:p-3 2xl:p-4 4xl:p-6 shadow-[0_4px_18px_0_rgba(0,0,0,0.13)] 2xl:shadow-[0_8px_36px_0_rgba(0,0,0,0.13)] chrome-email-container">
           <input
@@ -136,57 +187,19 @@ export default function Hero() {
           )}
         </div>
 
-      </div>
+        {/* Social Media Icons - Mobile positioning */}
+        <div className="mt-8 sm:hidden inline-flex items-center justify-center gap-2 z-20 chrome-social-icons">
+          <Link href="https://www.facebook.com/share/12L2oSJptNF/" target="_blank" className="flex h-7 w-7 items-center justify-center rounded-[14px] bg-[var(--color-neutral-800)] p-1 transition-all duration-200 hover:scale-110 focus:outline-none">
+            <Facebook01Icon size={16} color="#ffffffff" />
+          </Link>
+          <Link href="https://whatsapp.com" target="_blank" className="flex h-7 w-7 items-center justify-center rounded-[14px] bg-[var(--color-neutral-800)] p-1 transition-all duration-200 hover:scale-110 focus:outline-none">
+            <WhatsappIcon size={16} color="#ffffffff" />
+          </Link>
+          <Link href="mailto:info@example.com" className="flex h-7 w-7 items-center justify-center rounded-[14px] bg-[var(--color-neutral-800)] p-1 transition-all duration-200 hover:scale-110 focus:outline-none">
+            <Mail02Icon size={16} color="#ffffffff" />
+          </Link>
+        </div>
 
-      {/* Mobile Images Row - Inline layout for mobile only */}
-      <div className="absolute bottom-[-5%] left-[48%] transform -translate-x-1/2 flex items-center justify-center sm:hidden z-0">
-        {/* JBL Speaker */}
-        <div className="w-[120px] h-[120px] flex-shrink-0 -mr-3"
-             style={{ 
-               transform: 'rotate(11deg)',
-               backfaceVisibility: 'hidden',
-               WebkitBackfaceVisibility: 'hidden'
-             }}>
-          <Image
-            src="/jbl card.png"
-            alt="Speaker on yellow background"
-            fill
-            className="object-contain"
-            priority
-          />
-        </div>
-        
-        {/* Center Gimbal */}
-        <div className="w-[135px] h-[140px] flex-shrink-0 -mx-2"
-             style={{ 
-               transform: 'rotate(-12deg)',
-               backfaceVisibility: 'hidden',
-               WebkitBackfaceVisibility: 'hidden'
-             }}>
-          <Image
-            src="/gimble card.png"
-            alt="Gimbal on green background"
-            fill
-            className="object-contain"
-            priority
-          />
-        </div>
-        
-        {/* Ring Light */}
-        <div className="w-[94px] h-[94px] flex-shrink-0 -ml-2"
-             style={{ 
-               transform: 'rotate(-5.5deg)',
-               backfaceVisibility: 'hidden',
-               WebkitBackfaceVisibility: 'hidden'
-             }}>
-          <Image
-            src="/ringlight card.png"
-            alt="Ring light on red background"
-            fill
-            className="object-contain"
-            priority
-          />
-        </div>
       </div>
 
       {/* Desktop/Tablet Images - Hidden on mobile */}
@@ -283,8 +296,8 @@ export default function Hero() {
         />
       </div>
 
-      {/* Social Media Icons */}
-      <div className="absolute bottom-[-15%] sm:bottom-10 md:bottom-12 2xl:bottom-24 left-1/2 -translate-x-1/2 transform inline-flex items-center justify-center gap-2 sm:gap-3 md:gap-4 2xl:gap-8 z-20 chrome-social-icons">
+      {/* Social Media Icons - Desktop positioning */}
+      <div className="absolute bottom-[-15%] sm:bottom-10 md:bottom-12 2xl:bottom-24 left-1/2 -translate-x-1/2 transform hidden sm:inline-flex items-center justify-center gap-2 sm:gap-3 md:gap-4 2xl:gap-8 z-20 chrome-social-icons">
         <Link href="https://www.facebook.com/share/12L2oSJptNF/" target="_blank" className="flex h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 xl:h-12 xl:w-12 2xl:h-16 2xl:w-16 4xl:h-20 4xl:w-20 items-center justify-center rounded-[14px] sm:rounded-[16px] md:rounded-[20px] 2xl:rounded-[32px] 4xl:rounded-[40px] bg-[var(--color-neutral-800)] p-1 sm:p-1.5 md:p-2 2xl:p-4 transition-all duration-200 hover:scale-110 focus:outline-none">
           <Facebook01Icon size={16} className="sm:w-6 sm:h-6 md:w-6 md:h-6" color="#ffffffff" />
         </Link>
