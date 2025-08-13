@@ -54,7 +54,6 @@ export default function Home() {
       <Header />
       <div className="pt-[80px] relative z-10">
         <Hero />
-      <div className="pt-[80px] relative z-10">
         <AboutUS />
         <Contact />
         <Footer />
@@ -73,6 +72,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-  </div>
   );
 }
