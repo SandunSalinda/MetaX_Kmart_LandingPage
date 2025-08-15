@@ -69,7 +69,7 @@ export default function RootLayout({
       <body className={`antialiased`}>
         {children}
       </body>
-      <GoogleAnalytics gaId="{process.env.NEXT_PUBLIC_GA_ID}" />
+      <GoogleAnalytics gaId="G-LCNSSP4TC0" />
     </html>
   );
 }
